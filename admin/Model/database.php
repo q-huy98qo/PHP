@@ -4,7 +4,7 @@ class database{
 	private $hostname = "localhost";
 	private $username = "root";
 	private $password = "";
-	private $dbname = "websitelaptop";
+	private $dbname = "btl";
 	private $conn = NULL;
 	private $result = NULL;
 	private $rel = NULL;
@@ -372,6 +372,39 @@ class database{
 		}
 		else{
 			$data = $this->getData();
+		}
+		return $data;
+	}
+
+    public function ThongTinDonHangOrder($idKH)
+	{
+		$sql = "SELECT * FROM dondathang WHERE MaDDH = '$idKH'";
+		$this->execute($sql);
+		if($this->num_rows()==0){
+			$data = 0;
+		}
+		else{
+			$data = $this->getData();
+		}
+		return $data;
+	}
+    
+	public function Test($user,$pass)
+	{
+		$sql = "  
+		SELECT *
+		FROM  tblthanhvien
+		WHERE user='$user' and pass='$pass'
+		";
+		$this->execute($sql);
+
+		if($this->num_rows()==0){
+			$data = 0;
+		}
+		else{
+			while($datas = $this->getData()){
+				$data[] = $datas;
+			}
 		}
 		return $data;
 	}
