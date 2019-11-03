@@ -1,4 +1,4 @@
-2		<?php
+		<?php
 		if(isset($_GET['id'])){
 			$id = $_GET['id'];
 			$table = "sanphampost";
@@ -27,8 +27,8 @@
 
 				foreach($data_danhmuc as $value_danhmuc){
 					$tendanhmuccon =  $value_danhmuc['txttendanhmuccon'];
-					$sql = "SELECT * FROM sanphampost WHERE idloaitin IN(
-					SELECT id FROM tbltheloaiconsanpham_menu WHERE txttendanhmuccon = '$tendanhmuccon')";
+					//hiếu fix 1/11 
+					$sql = "SELECT * FROM sanphampost WHERE idloaitin = '$value_danhmuc['id']'";
 
 					$data_category_product = $db->GetDataCategory($sql);
 					if($data_category_product!=0){

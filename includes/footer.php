@@ -6,8 +6,8 @@
 						<h3>Về chúng tôi</h3>
 						<div class="info-body">
 							<p>TECHONE TDM Chuyên cung cấp các dòng laptop chính hãng , Uy tín , đảm bảo , cam kết chất lượng về sản phẩm .</p>
-							<p>Địa chỉ : Yên Hòa,Cầu Giấy , Hà Nội</p>
-							<p>SĐT : 0383.143.197 ( Mr.Quang )</p>
+							<p>Địa chỉ : Ngõ 79, Cầu Giấy , Hà Nội</p>
+							<p>SĐT : 0343687878 ( Mr.Hiêu )</p>
 						</div>
 					</div>
 				</div>

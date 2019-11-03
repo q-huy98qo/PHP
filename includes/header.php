@@ -100,23 +100,16 @@
 					?>
 
 					<li><a href="">Liên hệ</a></li>
-					<!-- <?php
-					$total = 0;
-					if(isset($_SESSION['cart']) && $_SESSION['cart'] != null){
-						foreach($_SESSION['cart'] as $list){
-							$total += $list['qty'];
+					 <?php
+						$total = 0;
+						if(isset($_SESSION['cart']) && $_SESSION['cart'] != null){
+							foreach($_SESSION['cart'] as $list){
+								$total += $list['qty'];
+							}
 						}
-					}
-					?> -->
+					?> 
 					<li><img src="image/icon/viet-ung-dung-tao-gio-hang-bang-php-shopping-cart-phan-2.png" alt="" width="20px" height="auto"> <a href="index.php?controller=san-pham-trong-gio-hang">Giỏ hàng :</a>  <?php echo "<span style='color:red; font-weight: bold'><a href='index.php?controller=san-pham-trong-gio-hang'>".$total."</a></span>"; ?></li>
 				</ul>
-
-				
-			<!-- 	<img src="image/icon/viet-ung-dung-tao-gio-hang-bang-php-shopping-cart-phan-2.png" alt="" width="20px" height="auto">
-
-				<h5>&nbsp;</h5>
-				<p></p> -->
-				
 
 			</div>
 			</div> <!-- /menu-wp -->

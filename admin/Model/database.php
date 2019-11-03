@@ -4,7 +4,7 @@ class database{
 	private $hostname = "localhost";
 	private $username = "root";
 	private $password = "";
-	private $dbname = "btl";
+	private $dbname = "websitelaptop";
 	private $conn = NULL;
 	private $result = NULL;
 	private $rel = NULL;
@@ -49,7 +49,7 @@ class database{
 			return FALSE;
 		}
 	}
-
+    
 	// Thực thi 
 	public function runquery($sql)
 	{
@@ -66,7 +66,16 @@ class database{
 		}
 		return $num;
 	}
-
+		// Đếm số bản ghi trong danh sách :
+	public function num_rows_product($data){
+		if($data){
+			$num = mysqli_num_rows($data);
+		}
+		else{
+			$num = 0;
+		}
+		return $num;
+	}
 		// Lấy dữ liệu từ CSDL :
 	public function getData(){
 		if($this->result){
@@ -119,13 +128,20 @@ class database{
 		}
 		return $data;
 	}
-
-	// Dự án là 1 tập các cv được thực hiện bởi 1 tập thể  .
+	
+	public function showAllProduct($tblTable){
+		$sql = "SELECT * FROM $tblTable";
+		$this->execute($sql);
+		
+		return $this->result;
+	}
+	
 
 	// Hiển thị ra 10 bản ghi mới nhất :
+	//hiếu fix ASC -> DESC ,1/11
 	public function showlist_10($tblTable)
-	{
-		$sql = "SELECT * FROM $tblTable ORDER BY id ASC LIMIT 0,8";
+	{      
+		$sql = "SELECT * FROM $tblTable ORDER BY id DESC LIMIT 0,8";
 		$this->execute($sql);
 		if($this->num_rows()==0){
 			$data = 0;
@@ -138,7 +154,22 @@ class database{
 		return $data;
 	}
 
-		// Phương thức lấy dữ liệu theo ID :
+    //Hiếu : hiển ta số record của page limit
+    public function showlist_Page($tblTable,$from,$record_page)
+	{      
+		$sql = "SELECT * FROM $tblTable LIMIT $from,$record_page";
+		$this->execute($sql);
+		if($this->num_rows()==0){
+			$data = 0;
+		}
+		else{
+			while($datas = $this->getData()){
+				$data[] = $datas;
+			}
+		}
+		return $data;
+	}
+		// Phương thức lấy dữ liệu theo ID : hiếu 
 	public function getID($tblTable, $id){
 		$sql = "SELECT * FROM $tblTable WHERE id = '".$id."'";
 		$this->execute($sql);
@@ -245,7 +276,7 @@ class database{
 
 	}
 
-	// Cập nhật số lần xem trang :
+	// Cập nhật số lần xem trang :Hiếu
 	public function SoLanXem($tblTable, $tencot, $id)
 	{
 		$sql = "UPDATE $tblTable SET $tencot = $tencot+1 WHERE id = '$id'";
@@ -701,25 +732,6 @@ class database{
 		return $data;
 	}
 
-	public function Test($user,$pass)
-	{
-		$sql = "  
-		SELECT *
-		FROM  tblthanhvien
-		WHERE user='$user' and pass='$pass'
-		";
-		$this->execute($sql);
-
-		if($this->num_rows()==0){
-			$data = 0;
-		}
-		else{
-			while($datas = $this->getData()){
-				$data[] = $datas;
-			}
-		}
-		return $data;
-	}
 
 	// Tin tuwsc post :
 	public function InsertPostNew($idTL, $idLT, $TieuDe, $HinhAnh, $MoTa, $NoiDung, $ChuoiCho, $LuotXem, $TrangThai)
@@ -897,19 +909,6 @@ class database{
 	public function ThongTinKhachHangOrder($idKH)
 	{
 		$sql = "SELECT * FROM khachhang WHERE id = '$idKH'";
-		$this->execute($sql);
-		if($this->num_rows()==0){
-			$data = 0;
-		}
-		else{
-			$data = $this->getData();
-		}
-		return $data;
-	}
-
-	public function ThongTinDonHangOrder($idKH)
-	{
-		$sql = "SELECT * FROM dondathang WHERE MaDDH = '$idKH'";
 		$this->execute($sql);
 		if($this->num_rows()==0){
 			$data = 0;

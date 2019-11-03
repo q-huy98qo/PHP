@@ -1,10 +1,29 @@
 					<?php require_once('includes/slider.php'); ?>
 
+                   <?php 
+                    $tblTable = "sanphampost"; 
+		            //dinh nghia so ban ghi tren 1 trang
+					$record_page = 4;			
+					//tinh tong so ban ghi
+					$total = $db->showlist($tblTable);
+					// print_r($total);
+					$dd = $db->showAllProduct($tblTable);
+					$num = mysqli_num_rows($dd);
+					// //dinh nghia so trang = tongsobanghi/so-ban-ghi-tren-trang
+					// //tinh so trang
+					$num_page = ceil($num/$record_page);
+					// //xac dinh trang hien tai , page  - 1 để lấy số page đó * với limit để ra đúng tổng số product cần 
+					$page = isset($_GET["page"])?($_GET["page"]-1):0;
+					// //lay tu ban ghi nao
+					$from = $page*$record_page;
+					// //thuc hien cau truy van de lay danh sach cac ban ghi
+					$data = $db->showlist_Page($tblTable,$from,$record_page);
+			
+                   	 ?>
 					<div class="sanphammoinhat">
 						<h3>Danh sách sản phẩm</h3>
 						<?php
-						$tblTable = "sanphampost";
-						$data = $db->showlist_10($tblTable);
+					
 						foreach($data as $dt){
 							?>
 							<div class="item-product">
@@ -20,7 +39,21 @@
 						?>
 
 					</div> <!--  /sanphammoinhat -->
-
+				<div class="row mt-5">
+                   <div class="col text-center">
+         		   <div class="block-27">
+	                   	<ul >
+							<li class="active"><a href="">Trang</a></li>
+							<?php 
+								for($i = 1; $i<= $num_page; $i++)
+									{
+								 ?>
+									<li><a href="index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+							<?php } ?>
+						</ul>
+                    </div>
+                </div>
+                </div><!-- page phân trang -->
 					<div class="sanphammoinhat">  <!-- Sản phẩm bán chạy nhất -->
 						<h3>Sản phẩm nhiều lượt xem nhất</h3>
 
@@ -44,6 +77,4 @@
 						}
 					?>
 
-				</div> <!--  /sanphammoinhat => sản phẩm bán chạy nhất-->
-
-				<!-- <div class="fb-comments" data-href="http://localhost:8888/www/webbanmypham.com/index.php" data-numposts="5"></div> -->
+				</div>

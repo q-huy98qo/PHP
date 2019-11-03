@@ -25,7 +25,7 @@
 								<br>
 								<span><img class="icon-sky" src="image/icon/images.png" alt="">&nbsp; &nbsp;0369.349.211</span>
 								<br>
-								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/shin.nakawa.7">FB : Quang</a></span>
+								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/quangmylove197">FB : Quang</a></span>
 							</li>
 
 							<li class="hotro">
@@ -33,7 +33,7 @@
 								<br>
 								<span><img class="icon-sky" src="image/icon/images.png" alt="">&nbsp; &nbsp;0369.145.254</span>
 								<br>
-								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/shin.nakawa.7">FB : Huy</a></span>
+								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/profile.php?id=100008018924815">FB : Huy</a></span>
 							</li>
 
 							<li class="hotro">
@@ -41,7 +41,7 @@
 								<br>
 								<span><img class="icon-sky" src="image/icon/images.png" alt="">&nbsp; &nbsp;0369.349.2115</span>
 								<br>
-								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/shin.nakawa.7">FB : Hiếu</a></span>
+								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/profile.php?id=100011446818668">FB : Hiếu</a></span>
 							</li>
 
 							<li class="hotro">
@@ -49,7 +49,7 @@
 								<br>
 								<span><img class="icon-sky" src="image/icon/images.png" alt="">&nbsp; &nbsp;0351.212.551</span>
 								<br>
-								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/shin.nakawa.7">FB : Lưu</a></span>
+								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/congtu.hovi.73">FB : Lưu</a></span>
 							</li>
 
 							<li class="hotro">
@@ -57,7 +57,7 @@
 								<br>
 								<span><img class="icon-sky" src="image/icon/images.png" alt="">&nbsp; &nbsp;0346.123.741</span>
 								<br>
-								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/shin.nakawa.7">FB : Hoàng</a></span>
+								<span><img class="icon-sky" src="image/icon/facebook-icon-preview-1.png" alt="">&nbsp; &nbsp;<a href="https://www.facebook.com/minhhoang1223">FB : Hoàng</a></span>
 							</li>
 						</div>  <!-- /danhmucsanpham -->
 					</div> <!-- /item-left -->
