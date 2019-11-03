@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2019 at 04:59 PM
+-- Generation Time: Nov 03, 2019 at 04:13 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.1.32
 
@@ -47,7 +47,13 @@ INSERT INTO `chitietdondathang` (`MaCTDDH`, `MaDDH`, `MaSP`, `TenSP`, `SoLuong`,
 (20, 13, 33, 'Dell Inspiron G7 N7591/Core i5-9300H/N5I5591W', 1, 27990000, 'upload/dell-2.jpg'),
 (21, 14, 34, 'Dell Inspiron N3476B/Core i5-8250U/4Gb/1Tb/AMD 520 Radeon 2Gb/DVDRW/Win10', 1, 15990000, 'upload/dell-1.jpg'),
 (22, 15, 41, 'Asus TUF FX505DY-AL095T/R5-3550H', 1, 23990000, 'upload/asus-2.png'),
-(23, 15, 37, 'Lenovo Ideadpad S340-15IWL/Core I3 8145U/4GB/256G SSD/WIN10', 1, 11990000, 'upload/lenovo.png');
+(23, 15, 37, 'Lenovo Ideadpad S340-15IWL/Core I3 8145U/4GB/256G SSD/WIN10', 1, 11990000, 'upload/lenovo.png'),
+(24, 16, 33, 'Dell Inspiron G7 N7591/Core i5-9300H/N5I5591W', 1, 27990000, 'upload/dell-2.jpg'),
+(25, 17, 33, 'Dell Inspiron G7 N7591/Core i5-9300H/N5I5591W', 1, 27990000, 'upload/dell-2.jpg'),
+(26, 18, 35, 'MSI GL63 8RCS-068VN/Core i5-8300H/8GB/256GB SSD/WIN10', 1, 21990000, 'upload/msi-1.jpg'),
+(27, 18, 36, 'MSI PS63 8MO-099VN/Core i7-8565U/8Gb/512Gb/15.6\"FHD/Win10', 1, 25990000, 'upload/msi-2.png'),
+(28, 19, 38, 'Macbook Air 13 256GB 2019 ', 1, 30990000, 'upload/apple.png'),
+(29, 20, 34, 'Dell Inspiron N3476B/Core i5-8250U/4Gb/1Tb/AMD 520 Radeon 2Gb/DVDRW/Win10', 1, 15990000, 'upload/dell-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -61,17 +67,23 @@ CREATE TABLE `dondathang` (
   `NgayGiao` datetime DEFAULT NULL,
   `DaThanhToan` tinyint(4) DEFAULT NULL,
   `MaKH` int(11) DEFAULT NULL,
-  `DaHuy` tinyint(4) DEFAULT NULL
+  `DaHuy` tinyint(4) DEFAULT NULL,
+  `Tongtien` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `dondathang`
 --
 
-INSERT INTO `dondathang` (`MaDDH`, `NgayDat`, `NgayGiao`, `DaThanhToan`, `MaKH`, `DaHuy`) VALUES
-(13, '2031-10-19 21:57:29', NULL, 1, 13, NULL),
-(14, '2001-11-19 15:42:14', NULL, NULL, 14, 1),
-(15, '2002-11-19 10:24:33', NULL, NULL, 15, NULL);
+INSERT INTO `dondathang` (`MaDDH`, `NgayDat`, `NgayGiao`, `DaThanhToan`, `MaKH`, `DaHuy`, `Tongtien`) VALUES
+(13, '2031-10-19 21:57:29', NULL, NULL, 13, NULL, 0),
+(14, '2001-11-19 15:42:14', NULL, 1, 14, NULL, 0),
+(15, '2002-11-19 10:24:33', NULL, NULL, 15, 1, 0),
+(16, '2019-11-03 21:52:02', NULL, NULL, 16, NULL, 27990000),
+(17, '2019-11-03 21:53:12', NULL, NULL, 17, NULL, 27990000),
+(18, '2019-11-03 21:53:53', NULL, NULL, 18, NULL, 47980000),
+(19, '2019-11-03 21:56:12', NULL, NULL, 19, NULL, 30990000),
+(20, '2019-11-03 21:56:53', NULL, NULL, 20, NULL, 15990000);
 
 -- --------------------------------------------------------
 
@@ -95,7 +107,12 @@ CREATE TABLE `khachhang` (
 INSERT INTO `khachhang` (`id`, `tenkhachhang`, `sodienthoai`, `diachi`, `email`, `thanhpho`) VALUES
 (13, 'quang', '033561321', 'gsfdga', 'adf@gmail.com', 'Ha Noi'),
 (14, 'huy', '11111111', 'hà nội', '', 'hà nội'),
-(15, 'thảo', '193333', 'eqeeee', 'rrrrr', 'hà nội');
+(15, 'thảo', '193333', 'eqeeee', 'rrrrr', 'hà nội'),
+(16, 'huy', '11111111', 'agfsd', 'phuongthao2k2qo@gmail.com', 'hà nội'),
+(17, 'huy', '11111111', 'agdf', 'quanghuy98qo@gmail.com', 'hà nội'),
+(18, 'thảo', '2345345', 'fdhfgh', 'phuongthao2k2qo@gmail.com', 'hà nội'),
+(19, 'huy', '193333', 'ádf', 'phuongthao2k2qo@gmail.com', 'hà nội'),
+(20, 'thảo', '2345345', 'đafad', 'phuongthao2k2qo@gmail.com', 'hà nội');
 
 -- --------------------------------------------------------
 
@@ -175,8 +192,8 @@ CREATE TABLE `tblthanhvien` (
 
 INSERT INTO `tblthanhvien` (`id`, `user`, `email`, `pass`, `pass2`, `roleId`) VALUES
 (4, 'huy', 'huy@gmail.com', 'huy', 'huy', 1),
-(5, 'admin', 'admin@gmail.com', 'admin', 'admin', 2),
-(13, 'an', 'an@gmail.com', 'an', '', 2);
+(5, 'admin', 'admin@gmail.com', 'admin', 'admin', 1),
+(14, 'an', 'an@gmail.com', 'an', '', 1);
 
 -- --------------------------------------------------------
 
@@ -315,19 +332,19 @@ ALTER TABLE `tbluserkhachhang`
 -- AUTO_INCREMENT for table `chitietdondathang`
 --
 ALTER TABLE `chitietdondathang`
-  MODIFY `MaCTDDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `MaCTDDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `dondathang`
 --
 ALTER TABLE `dondathang`
-  MODIFY `MaDDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `MaDDH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `phanquyen`
@@ -345,7 +362,7 @@ ALTER TABLE `sanphampost`
 -- AUTO_INCREMENT for table `tblthanhvien`
 --
 ALTER TABLE `tblthanhvien`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbltheloaiconsanpham_menu`

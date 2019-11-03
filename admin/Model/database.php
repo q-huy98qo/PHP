@@ -388,7 +388,7 @@ class database{
 		}
 		return $data;
 	}
-    
+
 	public function Test($user,$pass)
 	{
 		$sql = "  
@@ -670,15 +670,15 @@ class database{
 
 	// End TIN TỨC 
 
-	public function XuLyDonHang($tenkhachhang, $sodienthoai, $diachi, $email, $thanhpho)
+	public function XuLyDonHang($tenkhachhang, $sodienthoai, $diachi, $email, $thanhpho, $tongtien)
 	{
 		date_default_timezone_set('Asia/Ho_Chi_Minh');
 		$sql = "INSERT INTO khachhang(id, tenkhachhang, sodienthoai, diachi, email, thanhpho)VALUES(null, '$tenkhachhang', '$sodienthoai', '$diachi', '$email', '$thanhpho')";
 
 		if($this->runquery($sql)){
 			$last_id = $this->conn->insert_id;
-			$date = date('d/m/y H:i:s');
-			$sql_dondathang = "INSERT INTO dondathang(MaDDH, NgayDat, NgayGiao, DaThanhToan, MaKH, DaHuy)VALUES(null,'$date', null, null, '$last_id', null )";
+			$date = date('y/m/d H:i:s');
+			$sql_dondathang = "INSERT INTO dondathang(MaDDH, NgayDat, NgayGiao, DaThanhToan, MaKH, DaHuy,Tongtien)VALUES(null,'$date', null, null, '$last_id', null,'$tongtien')";
 			if($this->runquery($sql_dondathang)){
 				$last_id_donhang = $this->conn->insert_id;
 				if(isset($_SESSION['cart']) && $_SESSION['cart'] != NULL){

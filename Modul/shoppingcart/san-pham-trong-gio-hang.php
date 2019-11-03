@@ -101,7 +101,3 @@
 	</div>
 
 </div>
-
-<?php
-	require_once('don-hang.php');
-?>
