@@ -1,21 +1,5 @@
 				<div class="left-wp">
-					<div class="item-left">
-						<div class="danhmucsanpham">
-							<h3><i class="fa fa-bars" aria-hidden="true"></i> Danh mục sản phẩm</h3>
-							<ul>
-								<?php
-									$tblTable = "tbltheloaiconsanpham_menu";
-									// Hiện ra 10 bản ghi danh mục sản phẩm mới nhất
-									$data = $db->showlist_10($tblTable);
-									foreach($data as $dtcon){
-								?>
-								<li><a href="index.php?controller=loai-san-pham&id=<?php echo $dtcon['id']; ?>"><?php echo $dtcon['txttendanhmuccon']; ?></a></li>
-								<?php
-									}
-								?>
-							</ul>
-						</div>  <!-- /danhmucsanpham -->
-					</div> <!-- item-left -->
+					
 
 					<div class="item-left">
 						<div class="danhmucsanpham">

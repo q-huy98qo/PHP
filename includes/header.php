@@ -13,18 +13,7 @@
 <body>
 	<div class="container-wp">
 		<div class="header">
-			<div class="topbar-wp">
-				<div class="container">
-					<div class="bar-left">
-						<p>Cửu hàng laptop TECHONE - Chuyên cung cấp laptop chính hãng</p>
-					</div>
-					<div class="bar-right">
-						<span><i class="fa fa-envelope-o" aria-hidden="true"></i> laptopchinhhang@gmail.com</span>
-						<span><i class="fa fa-phone" aria-hidden="true"></i> 0383143197</span>
-						<!-- <span><a href="admin/index.php">Đăng nhập</a></span> -->
-					</div>
-				</div>
-			</div>  
+			 
 
 			<div class="logo-wp">
 				<div class="container">

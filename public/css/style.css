@@ -394,7 +394,7 @@ a.tieude-product:hover{
   width:100%;
   overflow: hidden;
   float: left;
-  background: #f0ad4e;
+  background: #3c3f44;
   margin-top: 20px;
 }
 
@@ -653,4 +653,85 @@ thead{
   padding-bottom: 40px;
 
 }
+
+
+
+.footer {
+  margin-top: 15px;
+  background-color: #3C3F44;
+  padding: 20px 0;
+}
+.footer .footer-box h3 {
+  border-bottom: 2px solid #ffffff;
+  margin-bottom: 25px;
+  color: #ffffff;
+  padding-bottom: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.footer .footer-box h3 span {
+  padding-bottom: 13px;
+  border-bottom: 2px solid #ff9c00;
+}
+.footer .footer-box ul li {
+  color: #aaaaaa;
+  margin-left: 10px;
+  list-style: disc;
+}
+.footer .footer-box ul li a {
+  padding: 10px 0 10px 10px;
+  display: block;
+}
+.footer .footer-box .box-address-content {
+  line-height: 30px;
+  color: #aaaaaa;
+}
+.footer .footer-box.box-social .fb-like-box {
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #54585f;
+}
+.footer .footer-box.box-social .social-icon ul li {
+  list-style: none;
+  float: left;
+  margin-left: 0;
+  margin-right: 10px;
+}
+.footer .footer-box.box-social .social-icon ul li a {
+  background-color: #ff9c00;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 20px;
+  height: 40px;
+  line-height: 35px;
+  padding: 10px;
+  text-align: center;
+  width: 40px;
+}
+.footer .footer-box.box-social .social-icon ul li a:hover {
+  background-color: #ffffff;
+  color: #ff9c00;
+}
+
+.navigation-menu {
+    background-color: transparent;
+    height: auto;
+    margin-bottom: 0;
+  }
+  .navigation-menu .menu-cate .menu-cate-title {
+    color: #373737 !important;
+  }
+  .navigation-menu .menu-cate .menu-cate-title a {
+    color: #373737 !important;
+  }
+  .mobile-menu {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-top: 1px solid #01c4c4;
+  }
+  .mobile-menu .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
 

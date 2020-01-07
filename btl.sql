@@ -18,15 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `btl`
---
 
--- --------------------------------------------------------
-
---
--- Table structure for table `chitietdondathang`
---
 
 CREATE TABLE `chitietdondathang` (
   `MaCTDDH` int(11) NOT NULL,

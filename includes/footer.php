@@ -1,68 +1,124 @@
 <div class="footer">
-		<div class="container">
-			<div class="col-md-4">
-				<div class="footer-wp">
-					<div class="info">
-						<h3>Về chúng tôi</h3>
-						<div class="info-body">
-							<p>TECHONE TDM Chuyên cung cấp các dòng laptop chính hãng , Uy tín , đảm bảo , cam kết chất lượng về sản phẩm .</p>
-							<p>Địa chỉ : Ngõ 79, Cầu Giấy , Hà Nội</p>
-							<p>SĐT : 0343687878 ( Mr.Hiêu )</p>
-						</div>
-					</div>
-				</div>
-			</div> <!--  /col-md-4 -->
+		<div class="footer-content clearfix">
+        <div class="container">
+            <div class="row">
+                    <div class="footer-box col-md-3 col-sm-12 col-xs-12">
+                        <div class="item">
+                            <h3>
+                                <span>Về ch&#250;ng t&#244;i</span>
+                            </h3>
+                        </div>
+                            <ul>
+                                                <li>
+                                                    <a href="gioi-thieu.html">
+                                                        Giới thiệu
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="content/giao-hang-doi-tra.html">
+                                                        Giao h&#224;ng - Đổi trả
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="content/chinh-sach-bao-mat.html">
+                                                        Ch&#237;nh s&#225;ch bảo mật
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="lien-he.html">
+                                                        Li&#234;n hệ
+                                                    </a>
+                                                </li>
+                            </ul>
+                    </div>
+                    <div class="footer-box col-md-3 col-sm-12 col-xs-12">
+                        <div class="item">
+                            <h3>
+                                <span>Trợ gi&#250;p</span>
+                            </h3>
+                        </div>
+                            <ul>
+                                                <li>
+                                                    <a href="content/huong-dan-mua-hang.html">
+                                                        Hướng dẫn mua h&#224;ng
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="content/huong-dan-thanh-toan.html">
+                                                        Hướng dẫn thanh to&#225;n
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="content/tai-khoan-giao-dich.html">
+                                                        T&#224;i khoản giao dịch
+                                                    </a>
+                                                </li>
+                            </ul>
+                    </div>
+                <div class="footer-box box-address col-md-3 col-sm-12 col-xs-12">
+                    <div class="item">
+                        <h3>
+                            <span>Thông tin công ty</span>
+                        </h3>
+                        <div class="box-address-content">
+                            <b>C&#212;NG TY TNHH PH&#193;T TRIỂN C&#212;NG NGHỆ RUNTIME</b>
+                            <p><i class="fa fa-map-marker"></i> 5/12A Quang Trung, P.14, Q.G&#242; Vấp, Tp.HCM</p>
+                            <p>
+                                <i class="fa fa-envelope"></i>
+                                <a href="mailto:info@runtime.vn">info@runtime.vn</a>
+                            </p>
+                            <p>
+                                <i class="fa fa-phone"></i>
+                                Phone: (08) 66 85 85 38
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-box box-social col-md-3 col-sm-12 col-xs-12">
+                    <div class="item">
+                        <h3>
+                            <span>Facebook</span>
+                        </h3>
+                        <div class="fb-like-box" data-href="https://www.facebook.com/runtime.vn" data-width="289"
+                             data-height="190" data-colorscheme="dark" data-show-faces="true" data-header="false"
+                             data-stream="false" data-show-border="false">
+                        </div>
+                        <div class="social-icon">
+                            <ul>
+                                <li><a target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.facebook.com/runtime.vn" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                <li><a target="_blank"><i class="fa fa-twitter "></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
 
-			<div class="col-md-4">
-				<div class="footer-wp">
-					<div class="info">
-						<h3>Thông tin chung</h3>
-						<div class="info-body">
-							<li><a href="">Giới thiệu về Cty</a></li>
-							<li><a href="">Năng lực sản xuất</a></li>
-							<li><a href="">Thư ngỏ đối tác bán hàng</a></li>
-						</div>
-
-						<h3>Hướng dẫn </h3>
-						<div class="info-body">
-							<li><a href="">Hướng dẫn đặt hàng</a></li>
-							<li><a href="">Hình thức thanh toán</a></li>
-							<li><a href="">Thư ngỏ đối tác bán hàng</a></li>
-							<li><a href="">Dịch vụ chuyển SHIP COD</a></li>
-						</div>
-					</div>
-				</div>
-			</div> <!--  /col-md-4 -->
-
-
-			<div class="col-md-4">
-				<div class="footer-wp">
-					<div class="info">
-						<h3>Danh mục sản phẩm</h3>
-						<ul>
-							<?php
-									$tblTable = "tbltheloaiconsanpham_menu";
-									// Hiện ra 10 bản ghi danh mục sản phẩm mới nhất
-									$data = $db->showlist_10($tblTable);
-									foreach($data as $dtcon){
-								?>
-								<li><a href="index.php?controller=loai-san-pham&id=<?php echo $dtcon['id']; ?>"><?php echo $dtcon['txttendanhmuccon']; ?></a></li>
-								<?php
-									}
-								?>
-
-						</ul>
-					</div>
-				</div>
-			</div> <!--  /col-md-4 -->
-
-		</div>
+                </div>
+                <div class="footer-box box-letter col-md-3 col-sm-12 col-xs-12 hide">
+                    <div class="item">
+                        <h3>
+                            Đăng ký nhận tin
+                        </h3>
+                        <div class="letter-title">
+                            <span>Hộp thư</span><i class="icon-title"></i>
+                        </div>
+                        <div class="letter-content">
+                            <div class="new-paper">
+                                <div class="input-box">
+                                    <input type="text" name="email" id="txtNewsletter" class="input-text form-control" value="" placeholder="Your Emain Address" />
+                                </div>
+                                <div class="button text-center">
+                                    <a class="btn btn-primary">Nhận tin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 	</div>  <!-- /footer -->
-	<div class="footerbar">
-		<div class="container">
-			<p style="text-align: center">&copy Copyright 2019 - Bài tập lớn </p>
-		</div>
-	</div>
+	
 
 </div> <!-- /container-wp -->
 

@@ -4,7 +4,7 @@ class database{
 	private $hostname = "localhost";
 	private $username = "root";
 	private $password = "";
-	private $dbname = "btl";
+	private $dbname = "web_mt";
 	private $conn = NULL;
 	private $result = NULL;
 	private $rel = NULL;
